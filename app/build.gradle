@@ -3,10 +3,10 @@ apply from: 'config.gradle'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "com.xfrocks.api.androiddemo"
+        applicationId "com.speakeasy.Android"
         resValue "string", "app_name", "Android Demo"
 
         minSdkVersion 21
@@ -40,7 +40,7 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.bumptech.glide:volley-integration:1.4.0@aar'
     compile 'com.facebook.android:facebook-android-sdk:4.1.0'
-    compile('com.twitter.sdk.android:twitter:1.6.0@aar') {
+    compile('com.twitter.sdk.android:twitter:2.3.2@aar') {
         transitive = true;
     }
     compile 'org.apache.httpcomponents:httpcore:4.3.2'

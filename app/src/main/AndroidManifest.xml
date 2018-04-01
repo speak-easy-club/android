@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xfrocks.api.androiddemo">
+    package="com.speakeasy.Android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -13,7 +13,7 @@
     <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
 
     <application
-        android:name=".App"
+        android:name="com.speakeasy.Android.App"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,7 +30,7 @@
             android:value="@string/fabric_api_key" />
 
         <activity
-            android:name=".auth.LoginActivity"
+            android:name="com.speakeasy.Android.auth.LoginActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize|stateVisible">
@@ -63,17 +63,17 @@
         </receiver>
 
         <service
-            android:name=".gcm.RegistrationService"
+            android:name="com.speakeasy.Android.gcm.RegistrationService"
             android:exported="false" />
         <service
-            android:name=".gcm.ReceiverService"
+            android:name="com.speakeasy.Android.gcm.ReceiverService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </service>
         <service
-            android:name=".gcm.InstanceIDService"
+            android:name="com.speakeasy.Android.gcm.InstanceIDService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.iid.InstanceID" />
@@ -81,16 +81,16 @@
         </service>
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.speakeasy.Android.MainActivity"
             android:label="@string/app_name" />
 
         <activity
-            android:name=".auth.RegisterActivity"
+            android:name="com.speakeasy.Android.auth.RegisterActivity"
             android:label="@string/title_activity_register"
             android:windowSoftInputMode="adjustResize|stateVisible">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.xfrocks.api.androiddemo.auth.LoginActivity" />
+                android:value="com.speakeasy.Android.auth.LoginActivity" />
         </activity>
 
         <activity
@@ -100,17 +100,17 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
-            android:name=".discussion.ForumActivity"
+            android:name="com.speakeasy.Android.discussion.ForumActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop" />
 
         <activity
-            android:name=".discussion.ThreadActivity"
+            android:name="com.speakeasy.Android.discussion.ThreadActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop" />
 
         <activity
-            android:name=".discussion.ActionSendReceiver"
+            android:name="com.speakeasy.Android.discussion.ActionSendReceiver"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert">
             <intent-filter>
@@ -121,12 +121,12 @@
         </activity>
 
         <activity
-            android:name=".discussion.ConversationActivity"
+            android:name="com.speakeasy.Android.discussion.ConversationActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop" />
 
         <receiver
-            android:name=".gcm.ChatOrNotifReceiver"
+            android:name="com.speakeasy.Android.gcm.ChatOrNotifReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.xfrocks.api.androiddemo.ChatOrNotif" />

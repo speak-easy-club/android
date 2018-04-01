@@ -6,3 +6,5 @@
 /build
 /captures
 debug.jks
+app/google-services.json
+speakeasy.key

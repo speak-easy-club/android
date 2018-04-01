@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/quick_reply"
-        android:name="com.xfrocks.api.androiddemo.discussion.QuickReplyFragment"
+        android:name="com.speakeasy.Android.discussion.QuickReplyFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
